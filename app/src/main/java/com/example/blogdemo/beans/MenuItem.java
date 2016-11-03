@@ -1,4 +1,4 @@
-package beans;
+package com.example.blogdemo.beans;
 
 /**
  * Created by Administrator on 2016/11/3.

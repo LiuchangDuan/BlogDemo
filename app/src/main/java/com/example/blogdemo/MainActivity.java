@@ -12,12 +12,12 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 
+import com.example.blogdemo.adapters.MenuAdapter;
+import com.example.blogdemo.beans.MenuItem;
+import com.example.blogdemo.listener.OnItemClickListener;
+
 import java.util.ArrayList;
 import java.util.List;
-
-import adapters.MenuAdapter;
-import beans.MenuItem;
-import listener.OnItemClickListener;
 
 /**
  * 当用户点击ActionBar左上角的按钮时弹出菜单

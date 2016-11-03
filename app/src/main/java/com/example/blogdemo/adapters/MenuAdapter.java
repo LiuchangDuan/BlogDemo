@@ -1,4 +1,4 @@
-package adapters;
+package com.example.blogdemo.adapters;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -12,8 +12,8 @@ import com.example.blogdemo.R;
 import java.util.ArrayList;
 import java.util.List;
 
-import beans.MenuItem;
-import listener.OnItemClickListener;
+import com.example.blogdemo.beans.MenuItem;
+import com.example.blogdemo.listener.OnItemClickListener;
 
 /**
  * Created by Administrator on 2016/11/3.
