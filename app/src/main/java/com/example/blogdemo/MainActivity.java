@@ -1,6 +1,7 @@
 package com.example.blogdemo;
 
 import android.app.AlertDialog;
+import android.app.Fragment;
 import android.app.FragmentManager;
 import android.content.DialogInterface;
 import android.os.Bundle;
@@ -27,6 +28,10 @@ public class MainActivity extends ActionBarActivity {
 
     // Fragment管理器
     protected FragmentManager mFragmentManager;
+
+    Fragment mArticleFragment = new ArticleFragment();
+
+    Fragment mAboutFragment;
 
     // 除了ActionBar之外的根视图
     private DrawerLayout mDrawerLayout;
@@ -87,6 +92,9 @@ public class MainActivity extends ActionBarActivity {
 
         mMenuRecyclerView.setAdapter(menuAdapter);
 
+        mFragmentManager.beginTransaction().add(R.id.articles_container, mArticleFragment)
+                .commitAllowingStateLoss();
+
     }
 
     // TODO
@@ -94,8 +102,15 @@ public class MainActivity extends ActionBarActivity {
         mDrawerLayout.closeDrawers();
         switch (item.iconResId) {
             case R.drawable.home:
+                mFragmentManager.beginTransaction().replace(R.id.articles_container, mArticleFragment)
+                        .commit();
                 break;
             case R.drawable.about:
+                if (mAboutFragment == null) {
+                    mAboutFragment = new ArticleFragment();
+                }
+                mFragmentManager.beginTransaction().replace(R.id.articles_container, mAboutFragment)
+                        .commit();
                 break;
             // 退出
             case R.drawable.exit:

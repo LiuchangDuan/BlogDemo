@@ -1,5 +1,6 @@
 <resources>
 
+    <string name="about">开发技术前线 (www.devtd.cn) 是一个高质量移动技术文章的聚合网站。邮箱 : dev.tech.frontier@gmail.com</string>
     <string name="about_menu">关于</string>
     <string name="article">文章</string>
     <string name="app_name">Blog</string>
